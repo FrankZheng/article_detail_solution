@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" id="device">
+        <!-- <link rel="stylesheet" href="http://img.owspace.com/images/h5/css/reset.css">
+        <link rel="stylesheet" href="http://img.owspace.com/images/h5/css/style.css?var=0130"> -->
+        <style>
+            body {
+                padding: 0px;
+                margin: 0px;
+                background-color: #F8F7F5;
+                color: #0c0c0c;
+            }
+            p {
+                font-size: 16px;
+                line-height: 28px;
+                text-indent: 33px;
+                text-align: justify;
+                
+            }
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                display: block;
+                margin: 0;
+                padding: 0;
+            }
+            .content {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .imgTop {
+                border-bottom: 2px solid #AD8A54;
+            }
+            .articleTit {
+                margin-left: 10px;
+                margin-right: 10px;
+                
+            }
+            h5 {
+                color: #AC8B51;
+                font-size: 13px;
+                letter-spacing: 2px;
+                margin-block-start: 1.67em;
+                margin-block-end: 1.67em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+            }
+            .r1 {
+                margin: 2px 0 12px 0;
+                overflow: hidden;
+                font-size: 13px;
+                line-height: 16px;
+                display: block;
+            }
+            .friendly_time {
+                display: block;
+                float: right;
+                font-size: 9px;
+                color: #666;
+                letter-spacing: 1px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            <div class="imgTop">
+                <img class="thumbnail" src="%s"/>
+            </div>
+
+            <div class="articleTit">
+                <div class="r1">
+                    <h5>文字</h5> <em class="friendly_time" data-time="">%s</em>
+                </div>
+                <h1 class="spTitle">%s</h1>
+                <h6 class="author">%s</h6>
+                <p class="describe">%s</p>
+            </div>
+        </p>
+
+        <div class="content">
+            %s
+        </div>
+        
+    </body>
+</html>
