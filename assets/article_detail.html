@@ -5,19 +5,24 @@
         <!-- <link rel="stylesheet" href="http://img.owspace.com/images/h5/css/reset.css">
         <link rel="stylesheet" href="http://img.owspace.com/images/h5/css/style.css?var=0130"> -->
         <style>
-            body {
-                padding: 0px;
-                margin: 0px;
-                background-color: #F8F7F5;
-                color: #0c0c0c;
+            * {
+                margin: 0;
+                padding: 0;
             }
+
+            body {
+                background-color: #F8F7F5;
+                -webkit-overflow-scrolling: touch;
+            }
+
             p {
                 font-size: 16px;
                 line-height: 28px;
                 text-indent: 33px;
                 text-align: justify;
-                
+                margin-bottom: 19px;
             }
+
             img {
                 width: 100%;
                 height: auto;
@@ -26,62 +31,115 @@
                 margin: 0;
                 padding: 0;
             }
-            .content {
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-            .imgTop {
-                border-bottom: 2px solid #AD8A54;
-            }
-            .articleTit {
-                margin-left: 10px;
-                margin-right: 10px;
-                
-            }
+
             h5 {
                 color: #AC8B51;
                 font-size: 13px;
                 letter-spacing: 2px;
-                margin-block-start: 1.67em;
-                margin-block-end: 1.67em;
-                margin-inline-start: 0px;
-                margin-inline-end: 0px;
+                line-height: 19px;
+                margin-bottom: 23px;
+                margin-top: -10px;
             }
+
+            .content {
+                color: #1c1c1c;
+                margin-top: 34px;
+            }
+
+            .imgTop {
+                border-bottom: 2px solid #AD8A54;
+            }
+
+            .singleArticle {
+                padding: 15px;
+                padding-bottom: 35px;
+                font-style: normal;
+                color: #1C1C1C;
+            }
+
+            .articleTit {
+                color: #1C1C1C;
+            }
+            
             .r1 {
-                margin: 2px 0 12px 0;
-                overflow: hidden;
+                margin: 2px 0px 12px;
                 font-size: 13px;
                 line-height: 16px;
-                display: block;
+                display: -webkit-flex;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
             }
-            .friendly_time {
-                display: block;
-                float: right;
+
+            .category {
+                color: #AC8B51;
+                font-size: 13px;
+                letter-spacing: 2px;
+            }
+
+            .updateDate {
                 font-size: 9px;
                 color: #666;
                 letter-spacing: 1px;
             }
+
+            .spTitle {
+                font-size: 29px;
+                line-height: 35px;
+                color: #000;
+                font-weight: normal;
+            }
+
+            .author {
+                margin: 29px 0 20px;
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: normal;
+                color: #666;
+                display: block;
+            }
+
+            .describe {
+                margin-top: 38px;
+                margin-bottom: 34px;
+                font-size: 17px;
+                line-height: 28px;
+                width: 80%;
+                font-weight: normal;
+                color: #000;
+                text-align: justify;
+            }
+
+            /* h1, h2, h3, h4, h5, h6, p, figure, form, blockquote {
+               margin: 0;
+            } */
+            
+
         </style>
     </head>
     <body>
         <p>
             <div class="imgTop">
-                <img class="thumbnail" src="%s"/>
+                <img src="%s"/>
             </div>
 
-            <div class="articleTit">
-                <div class="r1">
-                    <h5>文字</h5> <em class="friendly_time" data-time="">%s</em>
+            <div class="singleArticle">
+                <div class="articleTit">
+                    <div class="r1">
+                        <span class="category">文字</span> 
+                        <span class="updateDate">%s</span>
+                    </div>
+                    <h1 class="spTitle">%s</h1>
+                    <h6 class="author">%s</h6>
+                    <h5 class="describe">%s</h5>
                 </div>
-                <h1 class="spTitle">%s</h1>
-                <h6 class="author">%s</h6>
-                <p class="describe">%s</p>
-            </div>
-        </p>
 
-        <div class="content">
-            %s
-        </div>
+                <hr />
+    
+                <div class="content">
+                    %s
+                </div>
+            </div>
         
     </body>
 </html>

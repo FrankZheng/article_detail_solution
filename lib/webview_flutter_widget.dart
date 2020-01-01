@@ -45,6 +45,7 @@ class _WebViewFlutterWidgetState extends State<WebViewFlutterWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(),
         body: _article == null
             ? Center(child: CircularProgressIndicator())
             : buildWebView());
