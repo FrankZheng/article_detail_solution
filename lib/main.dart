@@ -1,3 +1,4 @@
+import 'package:article_detail_solution/flutter_html_parse_view.dart';
 import 'package:flutter/material.dart';
 
 import 'flutter_html_widget.dart';
@@ -93,6 +94,16 @@ class _MyHomePageState extends State<MyHomePage> {
               title: Text('flutter_html static content'),
               onTap: () {
                 pushToWiget(FlutterHtmlWidget(articleId));
+              }),
+          Divider(
+            color: Colors.grey,
+          ),
+          ListTile(
+              title: Text('flutter html parse view'),
+              onTap: () {
+                pushToWiget(FlutterHtmlParseView(
+                  articleId: articleId,
+                ));
               }),
           Divider(
             color: Colors.grey,
