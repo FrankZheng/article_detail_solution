@@ -1,4 +1,6 @@
+import 'package:article_detail_solution/analyze_article_tags.dart';
 import 'package:article_detail_solution/flutter_html_parse_view.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'flutter_html_widget.dart';
@@ -40,7 +42,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final String articleId = '296529';
+  final String articleId = '296230';
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -108,12 +110,20 @@ class _MyHomePageState extends State<MyHomePage> {
           Divider(
             color: Colors.grey,
           ),
+          ListTile(
+              title: Text('Analyze HTML tags for article content'),
+              onTap: () {
+                ArticleContentAnalyzer().analyzeHtmlTags();
+              }),
+          Divider(
+            color: Colors.grey,
+          ),
         ],
       )),
     );
   }
 
   void pushToWiget(Widget widget) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => widget));
+    Navigator.push(context, CupertinoPageRoute(builder: (context) => widget));
   }
 }
